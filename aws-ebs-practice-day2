@@ -1,0 +1,25 @@
+# AWS EBS Practice - Day 2
+
+This repository contains my Day 2 practice tasks related to AWS EBS (Elastic Block Store), including attaching and mounting EBS volumes to EC2 instances.
+
+## 🛠️ Tasks Done
+
+- Created and attached a new EBS volume to an EC2 instance
+- Formatted the volume using `mkfs`
+- Mounted the volume to a directory
+- Verified persistence after reboot
+
+## 📂 Folder Structure
+
+- `scripts/`: Shell scripts used in the process
+- `notes/`: Linux commands and steps used
+- `screenshots/`: Output of CLI or EC2 steps
+
+## 📜 Basic Commands Used
+
+```bash
+lsblk
+sudo mkfs -t ext4 /dev/xvdf
+sudo mkdir /data
+sudo mount /dev/xvdf /data
+df -h
