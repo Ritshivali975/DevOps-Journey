@@ -1,0 +1,22 @@
+# AWS EBS Practice - Day 3
+
+This repository contains Day 3 practice tasks for AWS EBS, focusing on volume persistence across reboots and automating EBS mounting using `/etc/fstab`.
+
+---
+
+## 📌 Topics Covered
+
+- Verified EBS volume persistence
+- Configured automatic mounting using fstab
+- Learned how to get UUID of EBS volume
+- Resized EBS volume and extended file system
+
+---
+
+## 🔧 Basic Steps Followed
+
+### 1. Get UUID of the volume
+
+```bash
+sudo blkid /dev/xvdf
+
