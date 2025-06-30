@@ -1,0 +1,39 @@
+# AWS Auto Scaling with Load Balancer – Rit Shivali ☁️
+
+This project demonstrates how to set up **Auto Scaling Group (ASG)** with an **Application Load Balancer (ALB)** on AWS using EC2 and NGINX. When demand increases, new instances launch automatically — and when load decreases, instances terminate.
+
+---
+
+## 🔧 What I Built
+
+- ✅ EC2 Launch Template with NGINX pre-installed  
+- ✅ Target Group for health check routing  
+- ✅ Application Load Balancer (ALB)  
+- ✅ Auto Scaling Group (ASG) with min, max, desired instance setup  
+- ✅ Manual scaling and self-healing behavior tested
+
+---
+
+## ⚙️ Tech Stack
+
+- AWS EC2 (Ubuntu)
+- Auto Scaling Group (ASG)
+- Application Load Balancer (ALB)
+- NGINX Web Server
+- Launch Template
+- Target Group
+- Shell Scripting (User Data)
+
+---
+
+## 📌 Setup Steps
+
+### 1️⃣ Create Launch Template
+With this User Data script:
+
+```bash
+#!/bin/bash
+apt update
+apt install nginx -y
+echo "<h1>Hello from Auto Scaling EC2 – Rit</h1>" > /var/www/html/index.html
+systemctl start nginx
