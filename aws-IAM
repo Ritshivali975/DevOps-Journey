@@ -1,0 +1,36 @@
+# AWS IAM Practice – Rit Shivali ☁️🔐
+
+This repository documents my hands-on practice and learning of **IAM (Identity and Access Management)** in AWS. IAM is the foundation of AWS security and allows fine-grained access control to AWS resources.
+
+---
+
+## 🔐 What I Practiced
+
+- ✅ Creating IAM users with programmatic and console access
+- ✅ Grouping users and assigning policies (e.g., Admin, S3ReadOnly)
+- ✅ Creating custom IAM policies using JSON
+- ✅ Using IAM roles with EC2 to access other services securely
+- ✅ Enabling and testing Multi-Factor Authentication (MFA)
+- ✅ Understanding IAM best practices (least privilege, no root usage)
+
+---
+
+## 💡 Key Concepts Learned
+
+| Concept | Description |
+|--------|-------------|
+| **IAM Users** | Individual accounts to access AWS |
+| **IAM Groups** | Logical grouping of users to manage permissions easily |
+| **IAM Policies** | JSON documents that define allowed or denied actions |
+| **IAM Roles** | Assign temporary access to services like EC2, Lambda |
+| **MFA** | Adds security by requiring an additional auth factor |
+| **Best Practices** | Avoid root usage, use least privilege, rotate keys, etc. |
+
+---
+
+## 🛠️ Sample Commands & Snippets
+
+### Create a user with AWS CLI:
+```bash
+aws iam create-user --user-name dev-user
+
