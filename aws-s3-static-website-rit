@@ -1,0 +1,47 @@
+# AWS S3 Static Website Hosting with Versioning
+
+This project demonstrates how to:
+
+- ✅ Host a static website using Amazon S3
+- 🔁 Enable versioning to manage multiple versions of uploaded files
+
+---
+
+## 🛠️ Setup Details
+
+### 📌 Bucket Name: `staticwebsite-rit`
+- Region: ap-south-1 (Mumbai)
+- Public access disabled, with static website hosting configured
+
+### 🌐 Files Uploaded:
+- `index.html` – Main landing page
+- `index404.html` – Custom error page
+- `home.svg`, `logo.svg` – Image assets
+
+### 🔁 Versioning Enabled:
+Versioning was turned on to retain file change history. You can track changes or restore older versions of files as needed.
+
+---
+
+## 🧪 Test Output
+
+Access the hosted website using the S3 static hosting endpoint (URL provided in the Properties section).
+
+---
+
+## 🖼 Screenshot
+
+![S3 Bucket Objects](./Screenshot.png)
+
+---
+
+## 🔗 Useful AWS CLI Commands
+
+```bash
+# Enable versioning
+aws s3api put-bucket-versioning \
+--bucket staticwebsite-rit \
+--versioning-configuration Status=Enabled
+
+# List object versions
+aws s3api list-object-versions --bucket staticwebsite-rit
