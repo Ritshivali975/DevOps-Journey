@@ -1,0 +1,17 @@
+# 🚀 AWS EC2 + CloudFront: Nginx Web Server Setup
+
+## 🧠 Objective
+Deploy a Nginx web server on EC2 and accelerate it globally using AWS CloudFront.
+
+## ⚙️ Services Used
+- Amazon EC2 (Ubuntu)
+- Amazon CloudFront
+- Nginx Web Server
+
+## 🔧 Steps Performed
+
+1. Launched EC2 instance (`t2.micro`, Ubuntu) in `us-east-1`
+2. Connected via SSH and installed Nginx:
+   ```bash
+   sudo apt update
+   sudo apt install nginx -y
